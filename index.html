@@ -1,10 +1,61 @@
-<!DOCTYPE html>
-<html ng-app="app">
+<!doctype html>
+<html lang="en" ng-app="app">
 <head>
-  <meta charset="utf-8">
-  <title>Party of Two</title>
+    <meta charset="utf-8">
+    <title>Party of Two</title>
+    <!--Bootstrap latest compiled and minified CSS-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <!--Optional theme-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+    <!--Custom CSS-->
+    <link rel="stylesheet" href="content/css/app.css"/>
 </head>
 <body>
-This is the body...
+    <nav class="navbar navbar-inverse navbar-fixed-top" ng-controller="AuthController as vm">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#/">Party of Two</a>
+            </div>
+            <div id="navbar" class="collapse navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#/login">Log in</a></li>
+                    <li><a href="" ng-click="vm.logout()">Log out</a></li>
+                </ul>
+            </div><!--/.nav-collapse -->
+        </div>
+    </nav>
+    <!-- Main Content that changes based on route -->
+    <div class="container" ng-view></div>
+    <!--Third-party JS-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js"></script>
+    <script src="https://code.angularjs.org/1.4.4/angular-route.js"></script>
+    <script src="https://cdn.firebase.com/js/client/2.2.4/firebase.js"></script>
+    <script src="https://cdn.firebase.com/libs/angularfire/1.1.3/angularfire.min.js"></script>
+
+    <!--main app module-->
+    <script src="app/app.module.js"></script>
+
+    <!-- landing module -->
+    <script src="app/landing/landing.module.js"></script>
+    <script src="app/landing/config.route.js"></script>
+
+    <!-- auth module -->
+    <script src="app/auth/auth.module.js"></script>
+    <script src="app/auth/config.route.js"></script>
+    <script src="app/auth/auth.controller.js"></script>
+    
+    <!-- wait-list module -->
+    <script src="app/waitList/waitList.module.js"></script>
+    <script src="app/waitList/config.route.js"></script>
+    <script src="app/waitList/waitList.controller.js"></script>
+
 </body>
 </html>
