@@ -17,14 +17,14 @@ In order to run the code, you would need your own `Firebase` and `c9.io` account
 
 ###Technologies & Frameworks Used:###
 
-<img src="http://timurcatakli.github.io/assets/images/projects/logo-angular.png" style="width:80px;"/>
-<img src="http://timurcatakli.github.io/assets/images/projects/logo-firebase.png" style="width:80px;"/>
-<img src="http://timurcatakli.github.io/assets/images/projects/logo-node.png" style="width:80px;"/>
-<img src="http://timurcatakli.github.io/assets/images/projects/logo-npm.png" style="width:80px;"/>
-<img src="http://timurcatakli.github.io/assets/images/projects/logo-css3.png" style="width:80px;"/>
-<img src="http://timurcatakli.github.io/assets/images/projects/logo-html5.png" style="width:80px;"/>
-<img src="http://timurcatakli.github.io/assets/images/projects/logo-javascript.png" style="width:80px;"/>
-<img src="http://timurcatakli.github.io/assets/images/projects/logo-json-api.png" style="width:80px;"/>
+<img src="http://timurcatakli.github.io/assets/images/projects/logo-angular.png" width="100px">
+<img src="http://timurcatakli.github.io/assets/images/projects/logo-firebase.png" width="100px">
+<img src="http://timurcatakli.github.io/assets/images/projects/logo-node.png" width="100px">
+<img src="http://timurcatakli.github.io/assets/images/projects/logo-npm.png" width="100px">
+<img src="http://timurcatakli.github.io/assets/images/projects/logo-css3.png" width="100px">
+<img src="http://timurcatakli.github.io/assets/images/projects/logo-html5.png" width="100px">
+<img src="http://timurcatakli.github.io/assets/images/projects/logo-javascript.png" width="100px">
+<img src="http://timurcatakli.github.io/assets/images/projects/logo-json-api.png" width="100px">
 
 ###Screenshots:###
 
