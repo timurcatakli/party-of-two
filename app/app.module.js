@@ -1,5 +1,4 @@
-
-// According to John Papa style guid:
+// According to John Papa style guide:
 // Wrap Angular components in an Immediately Invoked Function Expression (IIFE).
 
 (function(){
@@ -15,7 +14,8 @@
       // Custom Modules
       'app.landing',
       'app.waitList',
-      'app.auth'
+      'app.auth',
+      'app.core'
       ])
 
 })();

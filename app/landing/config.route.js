@@ -10,7 +10,8 @@
 
   function configFunction($routeProvider){
     $routeProvider.when('/', {
-      templateUrl: 'app/landing/landing.html'
+      templateUrl: 'app/landing/landing.html',
+      css: 'landing'
     })
   }
 

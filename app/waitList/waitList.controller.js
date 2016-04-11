@@ -10,28 +10,17 @@
     // The way we add it by using $inject
     // Inject requires an array of dependencies
 
-    WaitListController.$inject = ['$firebaseArray'];
+    WaitListController.$inject = ['firebaseDataService', 'partyService'];
 
 
     // below we can use 'whatever' instead of $firebasearray because it is positional
-    function WaitListController($firebaseArray){
+    function WaitListController(firebaseDataService, partyService){
       // view model
       var vm = this;
       
-      var fireParties = new Firebase('https://ng-partyoftwo.firebaseio.com/parties');
-      var fireTextMessages = new Firebase('https://ng-partyoftwo.firebaseio.com/textmessages');
-
-      function Party(){
-        this.name = '',
-        this.phone = '',
-        this.size = '',
-        this.done = false,
-        this.notified = false
-      }
-
       // controller method definitions
-      vm.newParty = new Party();
-      vm.parties = $firebaseArray(fireParties);
+      vm.newParty = new partyService.Party();
+      vm.parties = partyService.parties;
       vm.addParty = addParty;
       vm.removeParty = removeParty;
       vm.sendTextMessage = sendTextMessage;
@@ -40,7 +29,7 @@
       // controller methods
       function addParty(){
         vm.parties.$add(vm.newParty)
-        vm.newParty = new Party();
+        vm.newParty = new partyService.Party();
 
       };
 
@@ -59,7 +48,7 @@
           name: party.name
         }
 
-        fireTextMessages.push(newTextMessage);
+        firebaseDataService.textMessages.push(newTextMessage);
         party.notified = true;
         vm.parties.$save(party);
       };
